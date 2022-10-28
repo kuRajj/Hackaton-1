@@ -8,21 +8,13 @@ export class ContextMenu extends Menu {
   open() {
     document.addEventListener("contextmenu", (event) => {
       event.preventDefault();
-      this.el.style.display = "initial";
-
-      const li = document.createElement("li");
-      li.className = ".menu-item";
-      li.textContent = "AAAAAAAAAAAAAAA";
-      li.style.color = "white";
-      this.el.append(li);
+      this.el.style.display = "initial";      
 
       const contextObj = this.el.getBoundingClientRect();
       const bodyObj = document.body.getBoundingClientRect();
 
-      this.el.style.left =
-      getСoordinate(bodyObj.width, event.pageX, contextObj.width) + "px";
-      this.el.style.top =
-      getСoordinate(bodyObj.height, event.pageY, contextObj.height) + "px";
+      this.el.style.left = getСoordinate(bodyObj.width, event.pageX, contextObj.width) + "px";
+      this.el.style.top = getСoordinate(bodyObj.height, event.pageY, contextObj.height) + "px";
     });
   }
 }
