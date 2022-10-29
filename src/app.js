@@ -1,8 +1,52 @@
 import "./styles.css";
 import { ContextMenu } from "./menu";
+import { BackgroundModule } from "./modules/background.module";
+
+const contextMenu = new ContextMenu(".menu");
+
+const backgroundModule = new BackgroundModule('type', 'change backgroun color');
+contextMenu.add(backgroundModule);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// contextMenu.open(event);
 
 document.addEventListener("contextmenu", (event) => {
-  event.preventDefault();
-  const contextMenu = new ContextMenu(".menu");
+  event.preventDefault();  
   contextMenu.open(event);
+});
+
+document.addEventListener("click", () => {
+  contextMenu.close();
 });

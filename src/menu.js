@@ -6,49 +6,23 @@ export class ContextMenu extends Menu {
     super(selector);
   }
 
-  open() {
+  open(event) {
     this.el.style.display = "initial";
     const contextObj = this.el.getBoundingClientRect();
     const bodyObj = document.body.getBoundingClientRect();
-
-    const li = document.createElement("li");
-    li.className = ".menu-item";
-    li.textContent = "AAAAAAAAAAAAAAA";
-    li.style.color = "white";
-    this.el.append(li);
-
     this.el.style.left =
       getСoordinate(bodyObj.width, event.pageX, contextObj.width) + "px";
     this.el.style.top =
       getСoordinate(bodyObj.height, event.pageY, contextObj.height) + "px";
+  }   
+
+  close() {    
+    this.el.style.display = "none";
+  }
+
+  add(someModule) {    
+    this.el.insertAdjacentHTML('afterbegin', someModule.toHTML());
+    console.log('s',this.el);
   }
   
-
-  
-
-  // open() {
-  //   document.addEventListener("contextmenu", (event) => {
-  //     event.preventDefault();
-  //     this.el.style.display = "initial";
-  //     const contextObj = this.el.getBoundingClientRect();
-  //     const bodyObj = document.body.getBoundingClientRect();
-
-  //     const li = document.createElement("li");
-  //     li.className = ".menu-item";
-  //     li.textContent = "AAAAAAAAAAAAAAA";
-  //     li.style.color = "white";
-  //     this.el.append(li);
-
-  //     this.el.style.left =
-  //       getСoordinate(bodyObj.width, event.pageX, contextObj.width) + "px";
-  //     this.el.style.top =
-  //       getСoordinate(bodyObj.height, event.pageY, contextObj.height) + "px";
-  //   });
-  // }
-
-  close() {
-    document.addEventListener("click", () => {
-      this.el.style.display = "none";
-    });
-  }
 }
