@@ -22,6 +22,9 @@ export class ContextMenu extends Menu {
     this.el.style.top =
       getСoordinate(bodyObj.height, event.pageY, contextObj.height) + "px";
   }
+  
+
+  
 
   // open() {
   //   document.addEventListener("contextmenu", (event) => {
