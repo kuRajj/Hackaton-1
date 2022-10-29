@@ -7,41 +7,6 @@ const contextMenu = new ContextMenu(".menu");
 const backgroundModule = new BackgroundModule('type', 'change backgroun color');
 contextMenu.add(backgroundModule);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// contextMenu.open(event);
-
 document.addEventListener("contextmenu", (event) => {
   event.preventDefault();  
   contextMenu.open(event);
