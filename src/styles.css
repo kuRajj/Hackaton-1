@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
 
 :root {
     --messaget-width: 270px;
@@ -17,6 +17,7 @@ body {
     height: 100vh;
     width: 100%;
     padding: 2rem;
+    overflow-x: hidden;
 }
 
 .menu {
@@ -38,7 +39,7 @@ body {
     font-size: 1rem;
     color: #eee;
     cursor: pointer;
-    transition: background-color .2s ease-in;
+  transition: background-color 0.2s ease-in;
     border-radius: inherit;
 }
 
@@ -46,7 +47,6 @@ body {
     background: #343434;
 }
 
-<<<<<<< HEAD
 img {
     width: 200px;
     height: 200px;
@@ -58,7 +58,6 @@ img {
     font: italic bold 20px/1.5 Arial,sans-serif;
     text-align: center;
 }
-=======
 .message-container {
     position: fixed;
     top: 15px;
@@ -118,4 +117,112 @@ img {
 .message .message__body {
     padding-right: 2.25rem
 }
->>>>>>> feature/custom-message
+
+.figures-wrapper {
+  width: 100%;
+  height: 100vh;
+}
+
+.figure {
+  position: absolute;
+}
+
+.figure1 {
+  width: 120px;
+  height: 120px;
+  background: #7fee1d;
+  border-radius: 60px;
+}
+
+.figure2 {
+  width: 120px;
+  height: 120px;
+  background: #f447ff;
+}
+
+.figure3 {
+  width: 220px;
+  height: 120px;
+  background: #4da1f7;
+}
+
+.figure4 {
+  width: 200px;
+  height: 100px;
+  background: #e9337c;
+  border-radius: 100px / 50px;
+}
+
+.figure5 {
+  width: 0;
+  height: 0;
+  border-bottom: 140px solid #fcf921;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+}
+
+.figure6 {
+  width: 120px;
+  height: 120px;
+  background: #1eff00;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  margin: 60px 0 10px 310px;
+}
+
+.figure7 {
+  height: 0;
+  width: 120px;
+  border-bottom: 120px solid #ec3504;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+}
+
+.figure8 {
+  width: 160px;
+  height: 100px;
+  background: #8734f7;
+  transform: skew(30deg);
+}
+
+.figure9 {
+  width: 0;
+  height: 0;
+  margin: 50px 0;
+  color: #fc2e5a;
+  position: relative;
+  display: block;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid #fc2e5a;
+  border-left: 100px solid transparent;
+  transform: rotate(35deg);
+}
+
+.figure9:before {
+  height: 0;
+  width: 0;
+  position: absolute;
+  display: block;
+  top: -45px;
+  left: -65px;
+  border-bottom: 80px solid #fc2e5a;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  content: "";
+  transform: rotate(-35deg);
+}
+
+.figure9:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  display: block;
+  top: 3px;
+  left: -105px;
+  color: #fc2e5a;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid #fc2e5a;
+  border-left: 100px solid transparent;
+  transform: rotate(-70deg);
+}
