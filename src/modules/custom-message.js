@@ -59,7 +59,7 @@ export class MessageModule extends Module {
       }, 5000);
     }
     el.style.background = getRandomColor()
-    el.style.width = random(100, 300) + 'px'
+    el.style.width = random(100,300)+'px'
     el.classList.add('message');
     let html = `{header}<div class="message__body"></div><button class="message__close" type="button"></button>`;
     const htmlHeader = '<div class="message__header"></div>';
@@ -71,6 +71,9 @@ export class MessageModule extends Module {
       const container = document.createElement('div');
       container.classList.add('message-container');
       document.body.append(container);
+    }
+    if (document.querySelector('.message')) {
+      document.querySelector('.message').remove()
     }
     document.querySelector('.message-container').append(el);
   }
