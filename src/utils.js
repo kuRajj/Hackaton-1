@@ -9,3 +9,10 @@ export function getСoordinate(windowParam, clickCordinate, contextMenuCordinate
     return clickCordinate;
   }
 }
+
+export function createFigureElement() {
+  const randomNumber = random(1, 9);
+  const figure = document.createElement("div");
+  figure.className = `figure figure${randomNumber}`;
+  return figure;
+}
