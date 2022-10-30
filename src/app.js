@@ -3,14 +3,10 @@ import { ContextMenu } from "./menu";
 import { BackgroundModule } from "./modules/background.module";
 import { ClicksModule } from "./modules/clicks.module";
 import { ShapeModule } from "./modules/shape.module";
-import { random } from "./utils";
 
 const menu = document.querySelector("#menu");
 const contextMenu = new ContextMenu(".menu");
-const backgroundModule = new BackgroundModule(
-  "backgroundModule",
-  "Изменить фон страницы"
-);
+const backgroundModule = new BackgroundModule("backgroundModule", "Изменить фон страницы");
 const clickModule = new ClicksModule("clickModule", "кликни на меня");
 const shapeModule = new ShapeModule("shapeModule", "Фигуры");
 
