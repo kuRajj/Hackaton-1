@@ -40,3 +40,15 @@ body {
 .menu .menu-item:hover {
     background: #343434;
 }
+
+img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.meaasge-to-player {
+    font: italic bold 20px/1.5 Arial,sans-serif;
+    text-align: center;
+}

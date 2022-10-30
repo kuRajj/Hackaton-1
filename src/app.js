@@ -11,12 +11,12 @@ const clickModule = new ClicksModule('clickModule', 'кликни на меня'
 contextMenu.add(backgroundModule);
 contextMenu.add(clickModule);
 
-menu.addEventListener('click', (event) => {
+menu.addEventListener('click', (event) => {  
   const dataInClickTarget = event.target.dataset['type'];
   if(dataInClickTarget === backgroundModule['type']) {
     backgroundModule.trigger();
-  } else if(dataInClickTarget === clickModule['type']) {
-    clickModule.trigger();
+  } else if(dataInClickTarget === clickModule['type']) {        
+    clickModule.trigger();    
   }
 })
 
