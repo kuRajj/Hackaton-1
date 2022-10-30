@@ -21,7 +21,7 @@ export class ContextMenu extends Menu {
   }
 
   add(someModule) {    
-    this.el.insertAdjacentHTML('afterbegin', someModule.toHTML()); 
+    this.el.insertAdjacentHTML('afterbegin', someModule.toHTML());    
   }
   
 }

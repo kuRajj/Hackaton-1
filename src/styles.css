@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
 
+:root {
+    --messaget-width: 270px;
+    --message-border-radius: 0.25rem;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -41,6 +46,7 @@ body {
     background: #343434;
 }
 
+<<<<<<< HEAD
 img {
     width: 200px;
     height: 200px;
@@ -52,3 +58,64 @@ img {
     font: italic bold 20px/1.5 Arial,sans-serif;
     text-align: center;
 }
+=======
+.message-container {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: var(--message-width);
+}
+
+.message {
+    font-size: .875rem;
+    font-weight: bold;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .05);
+    border-radius: var(--message-border-radius);
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+    position: relative;
+    overflow: hidden;
+    transition: .3s opacity;
+}
+
+.message:not(.message_show) {
+    display: none
+}
+
+.message_showing {
+    opacity: 0;
+}
+
+.message__header {
+    position: relative;
+    padding: 0.5rem 2.25rem 0.5rem 1rem;
+    background-color: rgba(0, 0, 0, .03);
+    border-bottom: 1px solid rgba(0, 0, 0, .05)
+}
+
+.message__close {
+    content: "";
+    position: absolute;
+    top: .75rem;
+    right: .75rem;
+    width: .875em;
+    height: .875em;
+    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/.875em auto no-repeat;
+    border: 0;
+    opacity: .5;
+    cursor: pointer;
+    transition: opacity .1s ease-in-out
+}
+
+.message__close:hover {
+    opacity: 1
+}
+
+.message__body {
+    padding: 1rem
+}
+
+.message .message__body {
+    padding-right: 2.25rem
+}
+>>>>>>> feature/custom-message
